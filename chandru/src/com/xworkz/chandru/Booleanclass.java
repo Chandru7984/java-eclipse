@@ -19,8 +19,8 @@ public class Booleanclass {
 		int name2= value.compareTo(name);
 		System.out.println(name2);
 		
-		boolean name3 = value.equals(value2);
-		System.out.println(name3);
+		boolean name0 = value.equals(value2);
+		System.out.println(name0);
 		
 		int name4 = value.hashCode();
 		System.out.println(name4);

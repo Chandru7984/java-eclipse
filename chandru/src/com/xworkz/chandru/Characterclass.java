@@ -10,8 +10,8 @@ public class Characterclass {
 		System.out.println(key);
 		
 		//Character Instance method;
-		char key1 = key.charValue();
-		System.out.println(key1);
+		char key0 = key.charValue();
+		System.out.println(key0);
 		
 		int key2 = key.compareTo(key);
 		System.out.println(key2);

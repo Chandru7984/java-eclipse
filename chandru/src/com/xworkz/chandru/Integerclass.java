@@ -16,8 +16,8 @@ public class Integerclass {
 		Integer value = tax.hashCode();
 		System.out.println(value);
 		
-		byte value1 = tax.byteValue();
-		System.out.println(value1);
+		byte value0 = tax.byteValue();
+		System.out.println(value0);
 		
 		int value2 = tax.compareTo(45);
 		System.out.println(value2);
