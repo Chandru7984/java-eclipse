@@ -1,4 +1,4 @@
-package com.xworkz.reverse.test;
+package com.xworkz.reverse.testquestions;
 
 public class Palindrome {
 
