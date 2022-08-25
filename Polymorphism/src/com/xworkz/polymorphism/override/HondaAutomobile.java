@@ -11,6 +11,16 @@ public class HondaAutomobile extends Automobile {
 		this.closeTime=closeTime;
 	}
 	
+	public HondaAutomobile() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void Automobile()
+	{
+		super.brand=brand;
+		super.type=type;
+	}
+	
 	public void torisu()
 	{
 		super.torisu();
