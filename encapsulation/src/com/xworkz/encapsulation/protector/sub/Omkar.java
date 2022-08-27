@@ -15,7 +15,7 @@ public class Omkar extends Trainer {
 
 	@Override
 	public boolean getTraining() {
-		return false;
+		return Omkar.super.getTraining();
 	}
 
 	@Override
