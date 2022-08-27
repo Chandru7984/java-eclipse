@@ -28,9 +28,8 @@ public class Fish {
 		else {
 			System.out.println("Not equal to fish");
 			if(obj instanceof Fish);
-			Fish fish2 = (Fish)obj;
-			Object converted = (Object)brand;
-			Object converted= (Object)type;
+			
+			
 		}
 	}
 
