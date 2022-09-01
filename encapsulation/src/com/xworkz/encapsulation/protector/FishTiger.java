@@ -9,9 +9,11 @@ public class FishTiger {
 		Fish fish = new Fish("Tiger Bomb","fresh water");
 		
 		System.out.println(fish);
+		fish.getBreed();
+		fish.getType();
 		
 		Fish fish2 = new Fish("Fighter","fresh water");
-		System.out.println(fish2);
+		System.out.println(fish.equals(fish2));
 	
 		
 
