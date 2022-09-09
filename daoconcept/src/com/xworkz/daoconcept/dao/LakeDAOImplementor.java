@@ -5,17 +5,18 @@ import java.util.Iterator;
 public class LakeDAOImplementor implements LakeDAO {
 
 	private String[] lakeNames = new String[10];
-	
+	private int index;
+
 	@Override
 	public boolean save(String lakeName) {
-		for (int i = 0; i < lakeNames.length; i++) {
-			if(lakeNames[i] == null) {
-			lakeNames[i] = lakeName;
+
+		if (lakeNames[index] == null) {
+			lakeNames[index] = lakeName;
 			System.out.println("Lakes of Array");
-			return true;
+
 		}
-		}
-		return false;
+		return true;
+
 	}
 
 	@Override
@@ -24,16 +25,39 @@ public class LakeDAOImplementor implements LakeDAO {
 			System.out.println(lakeNames[i]);
 		}
 	}
-	
+
 	@Override
 	public void delete(int index) {
-		lakeNames[index]=null;
+		lakeNames[index] = null;
 	}
-	
+
 	@Override
 	public void update(int index, String lakeName) {
-		lakeNames[index]=lakeName;
-		
+		lakeNames[index] = lakeName;
+
+	}
+
+	@Override
+	public boolean deleteByName(String name) {
+		for (int i = 0; i < lakeNames.length; i++) {
+			if (lakeNames[i] == name) {
+				lakeNames[i] = null;
+			}
+
+		}
+
+		return false;
+	}
+
+	@Override
+	public boolean updateByName(String name, String newName) {
+		for (int i = 0; i < lakeNames.length; i++) {
+			if (lakeNames[i] == name) {
+				lakeNames[i] = newName;
+			}
+
+		}
+		return false;
 	}
 
 }
