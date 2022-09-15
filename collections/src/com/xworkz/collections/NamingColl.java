@@ -18,7 +18,7 @@ public class NamingColl {
 		
 		System.out.println(list.remove(2));
 		
-		System.out.println(list.lastIndexOf(2));
+		System.out.println(list.lastIndexOf(list));
 		
 		System.out.println(list.clone());
 		

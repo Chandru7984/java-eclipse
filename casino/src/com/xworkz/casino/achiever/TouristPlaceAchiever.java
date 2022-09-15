@@ -2,6 +2,7 @@ package com.xworkz.casino.achiever;
 
 import com.xworkz.casino.dao.TouristPlaceDAO;
 import com.xworkz.casino.dao.TouristPlaceDAOImpl;
+import com.xworkz.casino.exception.InvalidTouristRuntimeException;
 import com.xworkz.casino.exception.TouristPlaceValidException;
 import com.xworkz.casino.service.TouristService;
 import com.xworkz.casino.service.TouristServiceImpl;
@@ -24,13 +25,17 @@ public class TouristPlaceAchiever {
 			touristService.checkAndValidate("Goa");
 			touristService.checkAndValidate("Gokarna");
 			touristService.checkAndValidate("EtinaBuja");
-			touristService.checkAndValidate("Manali");
+		//	touristService.checkAndValidate("Manali");
 			
 			
 		} catch (TouristPlaceValidException tpve) {
 			System.out.println(tpve.getClass());
 			System.out.println(tpve.getMessage());
+		}catch (InvalidTouristRuntimeException itre) {
+			System.out.println(itre.getClass());
+			System.out.println(itre.getMessage());
 		}
+		
 
 	}
 
