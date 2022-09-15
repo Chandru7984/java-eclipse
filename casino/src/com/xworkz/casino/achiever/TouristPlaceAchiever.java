@@ -11,16 +11,25 @@ public class TouristPlaceAchiever {
 	public static void main(String[] args) {
 
 		TouristPlaceDAO touristPlaceDAO = new TouristPlaceDAOImpl();
-		touristPlaceDAO.save("Manali");
 
 		TouristService touristService = new TouristServiceImpl(touristPlaceDAO);
 		try {
 			touristService.checkAndValidate("Manali");
 			touristService.checkAndValidate("Coorg");
 			touristService.checkAndValidate("Dandeli");
+			touristService.checkAndValidate("Kedarnath");
+			touristService.checkAndValidate("KolliHill");
+			touristService.checkAndValidate("Himalaya");
+			touristService.checkAndValidate("Marina");
+			touristService.checkAndValidate("Goa");
+			touristService.checkAndValidate("Gokarna");
+			touristService.checkAndValidate("EtinaBuja");
+			touristService.checkAndValidate("Manali");
+			
+			
 		} catch (TouristPlaceValidException tpve) {
-			tpve.getClass();
-			tpve.getMessage();
+			System.out.println(tpve.getClass());
+			System.out.println(tpve.getMessage());
 		}
 
 	}

@@ -20,8 +20,7 @@ public class TouristPlaceDAOImpl implements TouristPlaceDAO {
 		for (String ref : this.places)
 			if (ref != null && ref.equals(place)) {
 				System.out.println("Place is checked");
-				boolean refe = this.save(place);
-				return refe;
+				return true;
 			}
 		return false;
 	}

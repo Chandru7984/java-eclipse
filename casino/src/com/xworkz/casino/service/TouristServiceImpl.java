@@ -17,16 +17,18 @@ public class TouristServiceImpl implements TouristService {
 	@Override
 	public boolean checkAndValidate(String place) throws TouristPlaceValidException {
 		if (place != null && place.length() > 0 && place.length() < 10) {
-			if (touristPlaceDAO.checkName(place)) {
+			if (!this.touristPlaceDAO.checkName(place)) {
 				System.out.println("check method is runnig :" + place);
-				throw new TouristPlaceValidException("it is invalid");
-			} 
+				return this.touristPlaceDAO.save(place);
+			} else {
+				System.err.println("Place is not valid");
+				throw new TouristPlaceValidException("duplicate");
+			}
 
 		} else {
-			System.err.println("place is not valid");
-			throw new TouristPlaceValidException("place is not valid");
+			System.err.println("place is not correct");
+			throw new TouristPlaceValidException("Invalid");
 		}
-		return false;
 
 	}
 }
