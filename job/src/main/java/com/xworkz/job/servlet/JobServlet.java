@@ -26,35 +26,37 @@ public class JobServlet extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("Service is running in Job servlet");
 		resp.setContentType("text/html");
-		String a = req.getParameter("name");
-		String b = req.getParameter("email");
-		String c = req.getParameter("phone");
-		String d = req.getParameter("alternate");
-		String e = req.getParameter("gender");
-		String f = req.getParameter("qualification");
-		String g = req.getParameter("passout");
-		String h = req.getParameter("university");
-		String i = req.getParameter("address");
-		String j = req.getParameter("skills");
-		String k = req.getParameter("salary");
-		String l = req.getParameter("experience");
-		String m = req.getParameter("proof");
-		String n = req.getParameter("number");
+		String Name = req.getParameter("name");
+		String Email = req.getParameter("email");
+		String Phone = req.getParameter("phone");
+		String Alternate= req.getParameter("alternate");
+		String Gender = req.getParameter("gender");
+		String Qualification = req.getParameter("qualification");
+		String Passout = req.getParameter("passout");
+		String University = req.getParameter("university");
+		String Address = req.getParameter("address");
+		String Skills1 = req.getParameter("skills1");
+		String Skills2 = req.getParameter("skills2");
+		String Salary = req.getParameter("salary");
+		String Experience = req.getParameter("experience");
+		String Proof = req.getParameter("proof");
+		String Number = req.getParameter("number");
 		
-		System.out.println("Name: "+a);
-		System.out.println("Email: "+b);
-		System.out.println("Phone: "+c);
-		System.out.println("Alternate phone: "+d);
-		System.out.println("Gender: "+e);
-		System.out.println("Qualification: "+f);
-		System.out.println("Passout: "+g);
-		System.out.println("University: "+h);
-		System.out.println("Address: "+i);
-		System.out.println("Skills: "+j);
-		System.out.println("Salary: "+k);
-		System.out.println("Experience: "+l);
-		System.out.println("ID Proof: "+m);
-		System.out.println("ID Proof No: "+n);
+		System.out.println("Name: "+Name);
+		System.out.println("Email: "+Email);
+		System.out.println("Phone: "+Phone);
+		System.out.println("Alternate phone: "+Alternate);
+		System.out.println("Gender: "+Gender);
+		System.out.println("Qualification: "+Qualification);
+		System.out.println("Passout: "+Passout);
+		System.out.println("University: "+University);
+		System.out.println("Address: "+Address);
+		System.out.println("Skills: "+Skills1);
+		System.out.println("Skills: "+Skills2);
+		System.out.println("Salary: "+Salary);
+		System.out.println("Experience: "+Experience);
+		System.out.println("ID Proof: "+Proof);
+		System.out.println("ID Proof No: "+Number);
 		
 		PrintWriter writer = resp.getWriter();
 		writer.append("<html>")
@@ -62,37 +64,39 @@ public class JobServlet extends HttpServlet {
 		.append("<h1>")
 		.append("Registration is success...Below is the details")
 		.append("</h1>")
-		.append("Name: "+a)
+		.append("Name: "+Name)
 		.append("<br>")
-		.append("Email: "+b)
+		.append("Email: "+Email)
 		.append("<br>")
-		.append("Phone: "+c)
+		.append("Phone: "+Phone)
 		.append("<br>")
-		.append("Alternate phone: "+d)
+		.append("Alternate phone: "+Alternate)
 		.append("<br>")
-		.append("Gender: "+e)
+		.append("Gender: "+Gender)
 		.append("<br>")
-		.append("Qualification: "+f)
+		.append("Qualification: "+Qualification)
 		.append("<br>")
-		.append("Passout: "+g)
+		.append("Passout: "+Passout)
 		.append("<br>")
-		.append("University: "+h)
+		.append("University: "+University)
 		.append("<br>")
-		.append("Address: "+i)
+		.append("Address: "+Address)
 		.append("<br>")
-		.append("Skills: "+j)
+		.append("Skills: "+Skills1)
 		.append("<br>")
-		.append("Salary: "+k)
+		.append("Skills: "+Skills2)
 		.append("<br>")
-		.append("Experience: "+l)
+		.append("Salary: "+Salary)
 		.append("<br>")
-		.append("ID Proof: "+m)
+		.append("Experience: "+Experience)
 		.append("<br>")
-		.append("ID Proof No: "+n)
+		.append("ID Proof: "+Proof)
+		.append("<br>")
+		.append("ID Proof No: "+Number)
 		.append("</body>")
 		.append("</html");
 		
-		JobDTO dto = new JobDTO(a, b, Long.parseLong(c), Long.parseLong(d), e, f, Integer.parseInt(g), h, i, j, Integer.parseInt(k), l, m, Long.parseLong(n));
+		JobDTO dto = new JobDTO(Name, Email, Long.parseLong(Phone), Long.parseLong(Alternate), Gender, Qualification, Integer.parseInt(Passout), University, Address, Skills1, Skills2, Integer.parseInt(Salary), Experience, Proof, Long.parseLong(Number));
 		dtos.add(dto);
 	}
 
