@@ -1,7 +1,9 @@
 package com.xworkz.collection.states;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class StatesCreate {
 
@@ -89,6 +91,29 @@ public class StatesCreate {
 		} else {
 			System.out.println("Given String is not palindrome");
 		}
+		
+		
+		String input = "karnataka";
+		System.out.println("Input string is:"+input);
+		duplicateChars(input);
+		
 	}
+
+	private static void duplicateChars(String input) {
+		char [] chIn = input.toCharArray();
+		Set setDuplicated = new HashSet<String>();
+		Set distinctChars = new HashSet<String>();
+		
+		for (char ch : chIn) {
+			if(distinctChars.add(ch)==false)
+				//if character is duplicated, then insert it into duplicated set
+				setDuplicated.add(ch);
+		}
+		System.out.println("Duplicated characters are :");
+		setDuplicated.forEach(ch-> System.out.println(ch));
+		
+	}
+
+	
 
 }
